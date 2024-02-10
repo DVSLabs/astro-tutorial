@@ -26,7 +26,7 @@ const { frontmatter } = Astro.props;
 </style>
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <p>{frontmatter.pubDate.slice(0, 10)}</p>
+  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
   <p transition:animate={fade({ duration: "2s" })}>
     <em>{frontmatter.description}</em>
   </p>
